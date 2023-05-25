@@ -1,8 +1,11 @@
-import Message from "./Component/Message"
-
+import Message from "./Component/Message";
 
 function App() {
-  return <div><Message/></div>
+  return (
+    <div>
+      <Message />
+    </div>
+  );
 }
 
-export default App
+export default App;
