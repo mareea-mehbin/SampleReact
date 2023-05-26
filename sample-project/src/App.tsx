@@ -3,12 +3,18 @@ import ListGroup from "./Component/ListGroup";
 import Message from "./Component/Message";
 
 function App() {
+  let listOfCities = [
+    "Seoul",
+    "Bangalore",
+    "Berlin",
+    "Hanoi",
+    "New York",
+    "Mexico",
+    "Oslo",
+  ];
   return (
     <div>
-      <ListGroup
-        heading="Cities"
-        listOfItems={["Seoul", "Bangalore", "Berlin", "Hanoi", "New York"]}
-      />
+      <ListGroup heading="Cities" listOfItems={listOfCities} />
       {/* <FaveColor /> */}
       {/* <Message text="Mareea Mehbin" /> */}
     </div>
