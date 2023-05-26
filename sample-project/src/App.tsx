@@ -1,9 +1,11 @@
-import Message from "./Component/Message";
+import FaveColor from "./Component/FaveColor";
+import ListGroup from "./Component/ListGroup";
 
 function App() {
   return (
     <div>
-      <Message />
+      <ListGroup />
+      {/* <FaveColor /> */}
     </div>
   );
 }
