@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Alert from "./Component/Alert";
 import Button from "./Component/Button";
 import FaveColor from "./Component/FaveColor";
@@ -14,6 +15,9 @@ function App() {
     "Mexico",
     "Oslo",
   ];
+
+  const [alertVisible, setAlert] = useState(false);
+
   return (
     <div>
       {/* <ListGroup heading="Cities" listOfItems={listOfCities} /> */}
@@ -21,7 +25,10 @@ function App() {
       {/* <Message text="Mareea Mehbin" /> */}
       {/* <Alert>Hello World</Alert> */}
 
-      <Button text="Button Dark" />
+      {alertVisible && (
+        <Alert children="Hello World" onClose={() => setAlert(false)}></Alert>
+      )}
+      <Button text="Button Dark" buttonClick={() => setAlert(true)} />
     </div>
   );
 }

@@ -1,20 +1,15 @@
 interface Props {
   text: string;
+  buttonClick: () => void;
 }
 
 function Button(props: Props) {
-  const appendAlert = () => {
-    alert("Button clicked!");
-  };
-
   return (
     <>
-      <div id="liveAlertPlaceholder"></div>
       <button
         type="button"
         className="btn btn-dark"
-        onClick={appendAlert}
-        id="liveAlertBtn">
+        onClick={props.buttonClick}>
         Click {props.text}
       </button>
     </>
