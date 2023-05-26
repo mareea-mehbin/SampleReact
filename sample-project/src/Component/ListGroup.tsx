@@ -1,5 +1,11 @@
 import { MouseEvent, useState } from "react";
-function ListGroup() {
+
+interface Props {
+  heading: string;
+  listOfItems: string[];
+}
+
+function ListGroup(props: Props) {
   let cities = ["Chennai", "Bangalore", "Mumbai", "Delhi", "Kolkata"];
   // cities = [];
   // const handleClick = (event: MouseEvent) => console.log(event);
@@ -7,11 +13,11 @@ function ListGroup() {
 
   return (
     <>
-      <h1>Dynamic List</h1>
-      {cities.length === 0 && <p>No Items is found in the list</p>}
+      <h1>Dynamic List of {props.heading}</h1>
+      {props.listOfItems.length === 0 && <p>No Items is found in the list</p>}
 
       <ul className="list-group">
-        {cities.map((x, index) => (
+        {props.listOfItems.map((x, index) => (
           <li
             className={
               activeIndex === index
